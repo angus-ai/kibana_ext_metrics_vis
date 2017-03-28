@@ -1,6 +1,13 @@
 <div ng-controller="KbnExtendedMetricVisController" class="output-vis">
   <div class="output-container" ng-repeat="output in vis.params.outputs | filter:{enabled:true}">
-      <div class="output-value" ng-style="{'font-size': vis.params.fontSize+'pt'}">{{output.value}}</div>
-      <div>{{output.label}}</div>
+      <table>
+      <td>
+        <div class="output-value" ng-style="{'font-size': vis.params.fontSize+'pt'}">{{output.value}}</div>
+      </td>
+      <td class="output-labels">
+        <div class="output-label1">{{output.label}}</div>
+        <div class="output-label2">{{output.label2}}<div>
+      <td>
+      </table>
   </div>
 </div>
